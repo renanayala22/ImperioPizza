@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Império Pizza - Onde a tradição encontra o sabor!</title>
+    <link rel="stylesheet" href="css/style.css<!-- Remover espaços desnecessários e organizar tags -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pizzas imperiais com sabor tradicional em Império Pizza!"> <!-- SEO -->
+    <title>Império Pizza - Pizzas Imperiais</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER & NAVEGAÇÃO -->
+    <header class="header">
+        <div class="container">
+            <h1>👑 Império Pizza</h1>
+            <nav aria-label="Navegação do site">
+                <ul>
+                    <li><a href="#promo" class="active">Promoções</a></li>
+                    <li><a href="#produtos">Nossos Sabores</a></li>
+                    <li><a href="#acompanhamentos">Combos</a></li>
+                    <li><a href="#contato" class="btn-cta-nav">Pedir Agora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO HERO / PROMOÇÃO DO DIA -->
+    <section id="promo" class="hero-promo">
+        <div class="container promo-content">
+            <h2>👑 Nossos Modelos Imperiais</h2>
+            <h3>🔥 PROMOÇÃO DO DIA! Sabor e tradição em cada fatia.</h3>
+            <p><a href="#produtos" class="btn-promocao">Ver Sabores</a></p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PRODUTOS -->
+    <main class="container">
+        <h2 id="produtos" class="section-title">🍕 Todos os Sabores</h2>
+        <div class="product-grid">
+            <!-- Modelo Imperial Promoção -->
+            <div class="pizza-card imperial-promo product-item" data-name="Modelo Imperial - Cheddar Bacon" data-price="59,90" data-desc="Massa crocante com molho cheddar cremoso e bacon crocante." data-promo="sim">
+                <img src="images/imperial.png" alt="Modelo Imperial - Cheddar Bacon" class="pizza-image">
+                <h3>👑 Modelo Imperial</h3>
+                <span class="promo-badge">PROMOÇÃO DO DIA!</span>
+                <div class="price">R$ 59,90</div>
+                <button class="btn-adicionar" data-id="imperial">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- Outros produtos (exemplo) -->
+            <!-- ... -->
+        </div>
+
+        <!-- SEÇÃO DE ACOMPANHAMENTOS -->
+        <section id="acompanhamentos" class="complimentary-section">
+            <h2 class="section-title">🥗 Acompanha a Sua Pizza</h2>
+            <div class="container combo-grid">
+                <!-- Batatas Fritas -->
+                <div class="combo-item card">
+                    <img src="images/batata.png" alt="Batatas Fritas Premium" class="combo-image">
+                    <h3>Batatas Fritas Premium</h3>
+                    <p>Porção generosa, crocantes e salgadas.</p>
+                    <div class="price">R$ 25,00</div>
+                    <button class="btn-adicionar" data-id="batata">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contato" class="site-footer">
+        <div class="container">
+            <h2>Pronto para matar a fome?</h2>
+            <p>Clique abaixo e finalize seu pedido pelo WhatsApp!</p>
+            <button id="finalizarPedido" class="btn-cta">📲 Finalizar Pedido</button>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modalOverlay" class="modal-overlay hidden">
+        <div class="modal-content card">
+            <h3>Escolha o Formato da sua Pizza</h3>
+            <p>Para garantir a perfeição do Império Pizza:</p>
+            <div class="selection-buttons">
+                <button id="btnMeioAMeio" class="selection-btn selected">🍕 Meio a Meio (R$ 59,90)</button>
+                <button id="btnInteira" class="selection-btn">👑 Inteira (R$ 79,90)</button>
+            </div>
+            <p class="modal-message mt-10">Selecione o formato e clique em Continuar.</p>
+            <button id="btnConfirmarCompra" class="btn-cta-small disabled">Continuar / Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html><nav aria-label="Navegação do site">
+    <!-- ... -->
+</nav><button class="btn-promocao" onclick="addToCart('imperial')">Ver Sabores</button>@media (max-width: 768px) {
+    .product-grid { grid-template-columns: 1fr; }
+}<meta property="og:image" content="https://império-pizza.com/images/imperial.png">document.querySelectorAll('.btn-adicionar').forEach(btn => {
+    btn.addEventListener('click', () => {
+        addToCart(btn.dataset.id);
+    });
+});// Função para adicionar ao carrinho
+function addToCart(productId) {
+    const cartItem = document.createElement('div');
+    cartItem.className = 'cart-item';
+    // ... lógica do carrinho ...
+}
+
+// Evento para o modal
+document.getElementById('btnConfirmarCompra').addEventListener('click', () => {
+    if (document.querySelector('.selection-btn.selected').id === 'btnMeioAMeio') {
+        document.getElementById('btnConfirmarCompra').classList.remove('disabled');
+    }
+});">
+    <!-- Fonte Google Fonts: Roboto ou Poppins para um visual clean -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER & NAVEGAÇÃO -->
+    <header class="header">
+        <div class="container">
+            <h1>👑 Império Pizza</h1>
+            <nav>
+                <ul>
+                    <li><a href="#promo">Promoções</a></li>
+                    <li><a href="#produtos">Nossos Sabores</a></li>
+                    <li><a href="#acompanhamentos">Combos</a></li>
+                    <li><a href="#contato" class="btn-cta-nav">Pedir Agora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO HERO / PROMOÇÃO DO DIA (Foco Principal) -->
+    <section id="promo" class="hero-promo">
+        <div class="container promo-content">
+            <h2>👑 Nossos Modelos Imperiais</h2>
+            <h3>🔥 PROMOÇÃO DO DIA! Sabor e tradição em cada fatia.</h3>
+            <p>Experimente os clássicos que fizeram o Império Pizza ser um ícone de sabor!</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PRODUTOS (Modelo em Grid) -->
+    <main class="container">
+        <h2 id="produtos" class="section-title">🍕 Todos os Sabores</h2>
+        <div class="product-grid">
+            
+            <!-- 1. Modelo Imperial Promoção (A primeira na lista, mas estilizada diferente no Hero) -->
+            <div class="pizza-card imperial-promo product-item" data-name="Modelo Imperial - Cheddar Bacon" data-price="59,90" data-desc="Massa crocante com molho cheddar cremoso e cubos de bacon crocante." data-promo="sim">
+                <h3>👑 Modelo Imperial</h3>
+                <p class="subtitle promo-tag">PROMOÇÃO DO DIA!</p>
+                <h4>R$ 59,90</h4>
+                <div class="description">Massa especial com Cheddar e Bacon. Um clássico irresistível!</div>
+                <button class="btn-adicionar" data-id="imperial">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- 2. Pizza Modelo (Exemplo Regular) -->
+            <div class="pizza-card product-item" data-name="Margherita Clássica" data-price="49,90" data-desc="Molho de tomate fresco, mussarela artesanal e manjericão fresco." data-promo="nao">
+                <h3>🍅 Margherita Clássica</h3>
+                <h4>R$ 49,90</h4>
+                <div class="description">A simplicidade dos ingredientes italianos em cada mordida.</div>
+                <button class="btn-adicionar" data-id="margherita">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- 3. Pizza Diavolo (Exemplo de Alto Sabor) -->
+            <div class="pizza-card product-item" data-name="Diavolo Picante" data-price="54,90" data-desc="Molho picante artesanal, calabresa e pimentões marinados." data-promo="nao">
+                <h3>🌶️ Diavolo</h3>
+                <h4>R$ 54,90</h4>
+                <div class="description">Para quem ama um toque de ardência! Combinação perfeita.</div>
+                <button class="btn-adicionar" data-id="diavolo">Adicionar ao Carrinho</button>
+            </div>
+
+             <!-- 4. Pizza Vegetariana (Exemplo Leve) -->
+            <div class="pizza-card product-item" data-name="Verde Primavera" data-price="52,90" data-desc="Ricota cremosa com espinafre, milho e azeitonas pretas." data-promo="nao">
+                <h3>🍃 Verde Primavera</h3>
+                <h4>R$ 52,90</h4>
+                <div class="description">Leveza e frescor em uma explosão de sabores vegetais.</div>
+                <button class="btn-adicionar" data-id="vegetariana">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- 5. Pizza Pepperoni (Exemplo Popular) -->
+            <div class="pizza-card product-item" data-name="Pepperoni Supremo" data-price="48,90" data-desc="Mussarela, molho especial e pepperoni em rodelas perfeitas." data-promo="nao">
+                <h3>🥓 Pepperoni</h3>
+                <h4>R$ 48,90</h4>
+                <div class="description">O campeão de vendas! Sabor que nunca falha.</div>
+                <button class="btn-adicionar" data-id="pepperoni">Adicionar ao Carrinho</button>
+            </div>
+
+        </div> <!-- /product-grid -->
+
+        <!-- SEÇÃO DE ACOMPANHAMENTOS (Side Items & Combos) -->
+        <section id="acompanhamentos" class="complimentary-section">
+            <h2 class="section-title">🥗 Acompanha a Sua Pizza</h2>
+            <div class="container combo-grid">
+
+                <!-- Item 1: Batata Chips -->
+                <div class="combo-item card">
+                    <h3>Batatas Fritas Premium</h3>
+                    <p>Porção generosa, crocantes e salgadas. Ideal para acompanhar.</p>
+                    <span>R$ 25,00</span>
+                    <button onclick="alert('Adicionou Batata Frita!')">Adicionar</button>
+                </div>
+
+                <!-- Item 2: Coca Cola -->
+                <div class="combo-item card">
+                    <h3>Refrigerante Lata</h3>
+                    <p>Escolha o sabor: Cola, Guaraná ou Limão.</p>
+                    <span>R$ 10,00</span>
+                     <button onclick="alert('Adicionou Refrigerante!')">Adicionar</button>
+                </div>
+
+                 <!-- Item 3: Sobremesa (Exemplo) -->
+                <div class="combo-item card">
+                    <h3>Brigadeiro Gourmet</h3>
+                    <p>Sobremesa perfeita para fechar o combo. Cremoso e doce.</p>
+                    <span>R$ 15,00</span>
+                     <button onclick="alert('Adicionou Brigadeiro!')">Adicionar</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER E BOTÃO FINAL DE PEDIDO -->
+    <footer id="contato" class="site-footer">
+        <div class="container">
+            <h2>Pronto para matar a fome?</h2>
+            <p>Clique abaixo e finalize seu pedido diretamente pelo WhatsApp!</p>
+            <!-- O atributo 'data-*' será preenchido via JS, mas deixamos o botão aqui. -->
+            <button id="finalizarPedido" class="btn-cta">📲 Finalizar Pedido no WhatsApp</button>
+        </div>
+    </footer>
+
+    <!-- MODAL INTERATIVO (POP-UP) -->
+    <div id="modalOverlay" class="modal-overlay hidden">
+        <div class="modal-content card">
+            <h3>Escolha o Formato da sua Pizza</h3>
+            <p>Para garantir a perfeição do Império Pizza, precisamos saber:</p>
+            <div class="selection-buttons">
+                <button id="btnMeioAMeio" class="selection-btn selected">🍕 Meio a Meio</button>
+                <button id="btnInteira" class="selection-btn">👑 Inteira</button>
+            </div>
+            <p class="modal-message mt-10">Selecione o formato e clique em Continuar.</p>
+            <button id="btnConfirmarCompra" class="btn-cta-small" disabled>Continuar / Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+<!-- Link para JavaScript no final do corpo (melhor performance) -->
+<script src="script.js"></script>
+</body>
+</html>
